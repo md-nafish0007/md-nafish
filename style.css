@@ -147,6 +147,16 @@ a{
   text-align: center;
 }
 
+.cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+}
+
 footer {
   background-color: black;
   text-align: center;

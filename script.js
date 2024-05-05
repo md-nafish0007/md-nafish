@@ -30,5 +30,13 @@ document.addEventListener('mousemove', e => {
     div.style.transform = `scale(${(trailLength - index) / trailLength})`;
     div.style.opacity = ((trailLength - index) / trailLength) * 0.5; // Adjust this for more/less opacity
     cursorTrail.appendChild(div);
+
   });
+    document.getElementById('project-link').addEventListener('mouseover', function() {
+      this.textContent = 'Dont click';
+    });
+    
+    document.getElementById('project-link').addEventListener('mouseout', function() {
+      this.textContent = 'Project XT72F-G4K1';
+    });
 });

@@ -157,6 +157,57 @@ a{
   transition: transform 0.1s ease-out;
 }
 
+.h01 {
+  position: relative;
+  color: #0f0;
+  animation: glitch 1s infinite;
+}
+
+.h01::before,
+.h01::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgb(60, 234, 25);
+  background: black;
+}
+
+.h01::before {
+  left: 3px;
+  text-shadow: -3px 0 #0f0;
+  animation: glitch 1.5s infinite;
+}
+
+.h01::after {
+  left: -3px;
+  text-shadow: -3px 0 #0f0;
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0%, 100% {
+    clip: rect(44px, 450px, 56px, 0);
+  }
+  21%, 23% {
+    clip: rect(63px, 450px, 86px, 0);
+  }
+  36%, 38% {
+    clip: rect(20px, 450px, 45px, 0);
+  }
+  50%, 52% {
+    clip: rect(72px, 450px, 94px, 0);
+  }
+  71%, 73% {
+    clip: rect(10px, 450px, 33px, 0);
+  }
+  85%, 87%, 95%, 97% {
+    clip: rect(50px, 450px, 80px, 0);
+  }
+}
+
 footer {
   background-color: black;
   text-align: center;
